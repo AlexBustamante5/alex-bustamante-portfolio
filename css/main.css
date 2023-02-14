@@ -4,3 +4,31 @@ body {
     background-repeat: no-repeat;
     background-color: black;
 }
+
+body ::-webkit-scrollbar{
+
+    width: 0.5 rem;
+}
+
+body ::-webkit-scrollbar-track{
+
+    color: transparent;
+}
+
+body ::-webkit-scrollbar-thumb{
+
+    color: black;
+}
+
+main{
+
+    margin-left: 5 rem;
+}
+
+.navbar-left{
+
+    width: 5 rem;
+    height: 100 vh;
+    position:fixed;
+    
+}
