@@ -1,4 +1,6 @@
 body {
-    background-image: url("/Users/eabustamantem/Documents/headphones.jpg");
-    background-color: #cccccc;
-   }
+    background-image: url("/images/index_images/spectral_gold.jpg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+}
