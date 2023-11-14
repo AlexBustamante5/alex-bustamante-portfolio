@@ -1,3 +1,17 @@
 body{
     background-color: #000;
+    color: whitesmoke;
+    cursor: url(), auto;
+}
+
+nav{
+    color: whitesmoke;
+}
+a{
+    color: whitesmoke;
+    text-decoration: none;
+    
+}
+ul{
+    list-style-type: none;
 }
