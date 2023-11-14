@@ -1,7 +1,7 @@
 body{
     background-color: #000;
     color: whitesmoke;
-    cursor: url('C:\Users\ebust016\Documents\GitHub\alex-bustamante-portfolio\images\Alex_Bustamante_cursor.png'), auto;
+    cursor: url('../images/cursor_alex_bustamante.png'), auto;
 }
 
 nav{
