@@ -15,3 +15,16 @@ a{
 ul{
     list-style-type: none;
 }
+
+.cursor{
+    animation: cursorAnimation .5s infinite alternate;
+}
+
+@keyframes cursorAnimation {
+    from{
+        transform: rotate(180);
+    }
+    to{
+        transform: rotate(0);
+    }
+}
