@@ -43,7 +43,11 @@
         </nav>
     </header>
     <main>
-        <section class="intro">
+        <div class="ball-container">
+            <div class="ball"></div>
+        </div>
+        <div class="cursor"></div>
+        <section class="intro" id="name">
             <h1>
                     Alex Bustamante
             </h1>
@@ -51,6 +55,23 @@
                 Software developper
             </p>
         </section>
+        <script>
+            function toggleText() {
+                var x = document.getElementById("name");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+        </script>
+        <script>
+            const cursor = document.querySelector('.cursor');
+
+            document.addEventListener('mousemove', e => {
+                cursor.setAttribute("style", "top: "+e.pageY+"px; left: "+e.pageX+"px;")
+            })
+        </script>
 
     </main>
     <footer>
