@@ -2,9 +2,9 @@ body{
     margin: 0;
     height: 100vh;
     background-color: #000;
-    color: whitesmoke;
+    color: white;
     cursor:none;
-    pointer-events: none;
+    
 }
 
 nav{
@@ -18,30 +18,76 @@ a{
 ul{
     list-style-type: none;
 }
-
+/*animation that makes the ball fall*/
+@keyframes fall{
+    from{
+        top: 0;
+    }
+    to{
+        top: 17.5rem;
+    }
+}
+/*animation to bounce a ball*/
+@keyframes bounce {
+    0% {
+        transform: translateX(0) translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateX(2rem) translateY(-10rem) rotate(360deg);
+      }
+      100%{
+        transform: translateX(4rem) translateY(0) rotate(0deg)
+      }
+  }
+  /*animation to bounce a ball*/
+@keyframes bounce2 {
+    0% {
+        transform: translateX(4rem) translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateX(6rem) translateY(-6rem) rotate(360deg);
+      }
+      100%{
+        transform: translateX(8rem) translateY(0) rotate(0deg)
+      }
+  }
+  /*animation to bounce a ball*/
+@keyframes bounce3 {
+    0% {
+        transform: translateX(8rem) translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateX(10rem) translateY(-2rem) rotate(360deg);
+      }
+      100%{
+        transform: translateX(12rem) translateY(0) rotate(0deg)
+      }
+  }
 /*animation to roll a ball*/
 @keyframes roll {
     0% {
-        transform: translateX(0) rotate(0deg);
+        transform: translateX(12rem) rotate(0deg);
+      }
+      /*shift the ball 20rem to the right and perform a full rotation*/
+      100% {
+        transform: translateX(32rem) rotate(360deg);
+      }
+  }
+  @keyframes pulse{
+    0% {
+        transform: scale(1);
       }
       /*shift the ball 100px to the right and perform a full rotation*/
       100% {
-        transform: translateX(100px) rotate(360deg);
-      }
-  }
-
-@keyframes fall{
-    0%{
-        transform: translateY(0);
-    }
-    100%{
-        transform: translateY(100px);
+        transform: scale(0.75);    
     }
 }
+
 .ball-container{
-    display: flex;
-    align-items: left;
-    justify-content:left;
+    position: absolute;
+    height: 20rem;
+    width: 100%;
+    overflow: hidden;
 }  
 .ball {
     width: 30px;       /* Size of the ball */
@@ -50,8 +96,10 @@ ul{
     border-radius: 50%; /* Makes the ball circular */
     border: 2px solid; 
     border-color: white;
-    animation: fall 2s  forwards;
-    animation: roll 2s  forwards infinite; /*Roll the ball and stay in place*/
+    position: relative;
+    left: 30%;
+    animation: fall 1.5s linear forwards, bounce 1s linear forwards, bounce2 1s linear forwards, bounce3 1s linear forwards, roll 2s forwards; /*Roll the ball and stay in place*/
+    animation-delay: 0s,1.5s, 2.5s, 3.5s, 4.5s ;
 }
 
 .intro{
@@ -65,18 +113,8 @@ ul{
     border: 2px solid #fff;
     position: absolute;
     border-radius: 50%;
-    transition-duration: 200ms;
-    transition-timing-function: ease-out;
-    animation: cursorRoll 1s infinite alternate;
+    transition-duration: 100ms;
+    animation: pulse 1s infinite alternate;
 
 }
 
-@keyframes pulse{
-    0% {
-        transform: scale(1);
-      }
-      /*shift the ball 100px to the right and perform a full rotation*/
-      100% {
-        transform: scale(0.75);    
-    }
-}
