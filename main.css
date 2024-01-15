@@ -14,44 +14,44 @@
       transform: translateX(0) translateY(0) rotate(0deg);
     }
     50% {
-      transform: translateX(2rem) translateY(-10rem) rotate(360deg);
+      transform: translateX(2vw) translateY(-10vh) rotate(180deg);
     }
     100%{
-      transform: translateX(4rem) translateY(0) rotate(0deg)
+      transform: translateX(4vw) translateY(0) rotate(0deg)
     }
 }
 /*animation to bounce a ball*/
 @keyframes bounce2 {
   0% {
-      transform: translateX(4rem) translateY(0) rotate(0deg);
+      transform: translateX(4vw) translateY(0) rotate(0deg);
     }
     50% {
-      transform: translateX(6rem) translateY(-6rem) rotate(360deg);
+      transform: translateX(6vw) translateY(-6vh) rotate(360deg);
     }
     100%{
-      transform: translateX(8rem) translateY(0) rotate(0deg)
+      transform: translateX(8vw) translateY(0) rotate(0deg)
     }
 }
 /*animation to bounce a ball*/
 @keyframes bounce3 {
   0% {
-      transform: translateX(8rem) translateY(0) rotate(0deg);
+      transform: translateX(8vw) translateY(0) rotate(0deg);
     }
     50% {
-      transform: translateX(10rem) translateY(-2rem) rotate(360deg);
+      transform: translateX(10vw) translateY(-2vh) rotate(360deg);
     }
     100%{
-      transform: translateX(12rem) translateY(0) rotate(0deg)
+      transform: translateX(12vw) translateY(0) rotate(0deg)
     }
 }
 /*animation to roll a ball*/
 @keyframes roll {
   0% {
-      transform: translateX(12rem) rotate(0deg);
+      transform: translateX(12vw) rotate(0deg);
     }
     /*shift the ball 20rem to the right and perform a full rotation*/
     100% {
-      transform: translateX(32rem) rotate(360deg);
+      transform: translateX(20vw) rotate(360deg);
     }
 }
 @keyframes pulse{
@@ -66,7 +66,6 @@
 
 body{
     margin: 0;
-    height: 100vh;
     background-color: #000;
     color: white;
     cursor:none;
@@ -88,7 +87,7 @@ ul{
 
 .ball-container{
     position: absolute;
-    height: 20rem;
+    height: 20vh;
     width: 100%;
     overflow: hidden;
 }  
@@ -102,7 +101,7 @@ ul{
     position: relative;
     left: 30%;
     animation: fall 1s linear forwards, bounce 1s linear forwards, bounce2 1s linear forwards, bounce3 1s linear forwards, roll 2s forwards; /*Roll the ball and stay in place*/
-    animation-delay: 0s,1s, 2s, 3s, 4s ;
+    animation-delay: 0s,1s, 2s, 3s, 4s;
 }
 
 .intro{
